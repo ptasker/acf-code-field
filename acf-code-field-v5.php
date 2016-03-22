@@ -43,7 +43,8 @@ class acf_code_field extends acf_field {
 		*/
 
 		$this->defaults = array(
-			'font_size' => 14,
+			'mode' => 'htmlmixed',
+			'theme' => 'monokai',
 		);
 
 
@@ -473,15 +474,11 @@ class acf_code_field extends acf_field {
 		{
 			$valid = false;
 		}
-
-
 		// Advanced usage
 		if( $value < $field['custom_minimum_setting'] )
 		{
 			$valid = __('The value is too little!','acf-FIELD_NAME'),
 		}
-
-
 		// return
 		return $valid;
 
