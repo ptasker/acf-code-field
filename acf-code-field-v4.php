@@ -27,7 +27,7 @@ class acf_code_field_v4 extends acf_field {
 		// vars
 		$this->name     = 'acf_code_field';
 		$this->label    = __( 'ACF Code Field' );
-		$this->category = __( "Basic", 'acf' ); // Basic, Content, Choice, etc
+		$this->category = __( "Code Tools", 'acf' ); // Basic, Content, Choice, etc
 		$this->defaults = array(
 			'default_value' => '',
 			'formatting'    => 'br',
