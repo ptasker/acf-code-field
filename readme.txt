@@ -39,5 +39,15 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 == Changelog ==
 
+= 1.5 =
+* Bug Fix: Adding support for flexible content fields
+* Bug Fix: Correctly adding multiple stylesheets if multiple fields themes are selected on the same page
+
 = 1.0 =
 * First deploy and commit to wordpress.org repository
+
+
+== Upgrade Notice ==
+
+= 1.5 =
+Adding support for using ACF Code Field inside Flexible Content and Repeater Fields

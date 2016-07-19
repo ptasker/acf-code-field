@@ -167,23 +167,10 @@ class acf_code_field extends acf_field {
 		$e .= esc_textarea( $field['value'] );
 		$e .= '</textarea>';
 
-		// return
+
 		echo $e;
-		wp_enqueue_style( 'codemirror-curr-style', "{$dir}js/codemirror-5.13/theme/{$field['theme']}.css" );
+		wp_enqueue_style( "codemirror-curr-style-{$field['theme']}", "{$dir}js/codemirror-5.13/theme/{$field['theme']}.css" );
 
-		?>
-
-		<script>
-			var code_field_<?php echo $safe_slug; ?> = document.getElementById('<?php echo $field[ 'id' ]; ?>');
-			var editor = CodeMirror.fromTextArea(code_field_<?php echo $safe_slug; ?>, {
-				lineNumbers: true,
-				mode       : '<?php echo esc_js($field[ 'mode' ]); ?>',
-				theme      : '<?php echo $field['theme']; ?>',
-				extraKeys  : {"Ctrl-Space": "autocomplete"},
-				value      : document.documentElement.innerHTML
-			});
-		</script>
-		<?php
 	}
 
 
@@ -209,7 +196,18 @@ class acf_code_field extends acf_field {
 
 		$dir = plugin_dir_url( __FILE__ );
 
-		// register & include JS
+		// Register the script
+		wp_register_script( 'acf-input-code-field-input', "{$dir}js/input.js" );
+
+		// Localize the script with new data
+		$localized_values = array(
+			'plugins_url' => plugins_url('acf-code-field'),
+		);
+		wp_localize_script( 'acf-input-code-field-input', 'acf_code_field_obj', $localized_values );
+
+		// Enqueued script with localized data.
+		wp_enqueue_script( 'acf-input-code-field-input' );
+
 		wp_enqueue_script( 'acf-input-code-field-codemirror', "{$dir}js/codemirror-5.13/lib/codemirror.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-css', "{$dir}js/codemirror-5.13/mode/css/css.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-js', "{$dir}js/codemirror-5.13/mode/javascript/javascript.js" );

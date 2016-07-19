@@ -205,7 +205,7 @@ class acf_code_field_v4 extends acf_field {
 
 		$dir = trailingslashit( plugin_dir_url( __FILE__ ) );
 		
-		wp_enqueue_style( 'codemirror-curr-style', "{$dir}js/codemirror-5.13/theme/{$field['theme']}.css" );
+		wp_enqueue_style( 'codemirror-curr-style-'.$field['theme'], "{$dir}js/codemirror-5.13/theme/{$field['theme']}.css" );
 
 		?>
 
