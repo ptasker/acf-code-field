@@ -206,7 +206,6 @@ class acf_code_field extends acf_field {
 		wp_enqueue_script( 'acf-input-code-field-input' );
 
 		wp_enqueue_script( 'acf-input-code-field-codemirror', "{$dir}js/codemirror-5.13/lib/codemirror.js" );
-
 		wp_enqueue_script( 'acf-input-code-field-codemirror-css', "{$dir}js/codemirror-5.13/mode/css/css.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-js', "{$dir}js/codemirror-5.13/mode/javascript/javascript.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-xml', "{$dir}js/codemirror-5.13/mode/xml/xml.js" );
@@ -217,10 +216,12 @@ class acf_code_field extends acf_field {
 		wp_enqueue_script( 'acf-input-code-field-codemirror-showhint', "{$dir}js/codemirror-5.13/addon/hint/show-hint.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-xmlhint', "{$dir}js/codemirror-5.13/addon/hint/xml-hint.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlhint', "{$dir}js/codemirror-5.13/addon/hint/html-hint.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-selection', "{$dir}js/codemirror-5.13/addon/selection/mark-selection.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-matchbrackets', "{$dir}js/codemirror-5.13/addon/edit/matchbrackets.js" );
 
 		// register & include CSS
 		wp_enqueue_style( 'acf-input-code-field', "{$dir}js/codemirror-5.13/lib/codemirror.css" );
+		wp_enqueue_style( 'acf-input-code-field-css', "{$dir}css/input.css" );
 		wp_enqueue_style( 'codemirror-monokai', "{$dir}css/theme/monokai.css" );
 	}
 
