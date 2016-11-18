@@ -25,7 +25,7 @@
 			value: document.documentElement.innerHTML,
 			viewportMargin: Infinity
 		} );
-		
+
 		editor.refresh();
 	}
 
@@ -51,12 +51,7 @@
 			} );
 
 		} );
-		acf.add_action( 'append', function( $el ) {
-			$el.find( ".acf-field-acf-code-field" ).each( function( index, field ) {
-				initialize_code_field( $( field ) );
-			} );
 
-		} );
 		acf.add_action( 'append_field', function( $el ) {
 			if ( $el.attr( 'data-type' ) == "acf_code_field" ) {
 				initialize_code_field( $el );

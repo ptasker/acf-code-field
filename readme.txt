@@ -41,7 +41,7 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 = 1.6 =
 * Improvement: Adding PHP language editor support
-* Improvement: Better default text highlighting
+* Improvement: Making height automatically grow to the height of the content
 * Bug fix: Hidden panels using the code field need to be clicked on to display contents
 
 = 1.5 =
@@ -53,6 +53,9 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 
 == Upgrade Notice ==
+
+= 1.6 =
+Adding PHP language editor support
 
 = 1.5 =
 Adding support for using ACF Code Field inside Flexible Content and Repeater Fields
