@@ -22,9 +22,10 @@
 			matchBrackets: true,
 			styleSelectedText: true,
 			autoRefresh: true,
-			value: document.documentElement.innerHTML
+			value: document.documentElement.innerHTML,
+			viewportMargin: Infinity
 		} );
-
+		
 		editor.refresh();
 	}
 

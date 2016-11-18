@@ -158,11 +158,15 @@ class acf_code_field extends acf_field {
 		$o = array( 'id', 'class', 'name', 'placeholder', 'mode', 'theme' );
 		$e = '';
 
+
+
 		// populate atts
 		$atts = array();
 		foreach( $o as $k ) {
 			$atts[ $k ] = $field[ $k ];
 		}
+
+		$atts['class'] = 'acf-code-field-box';
 
 		$e .= '<textarea ' . acf_esc_attr( $atts ) . ' >';
 		$e .= esc_textarea( $field['value'] );
