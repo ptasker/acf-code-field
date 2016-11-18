@@ -19,8 +19,8 @@
 			mode: $textarea.attr( "mode" ),
 			theme: $textarea.attr( "theme" ),
 			extraKeys: { "Ctrl-Space": "autocomplete" },
+			matchBrackets: true,
 			value: document.documentElement.innerHTML
-
 		} );
 
 		editor.refresh();
