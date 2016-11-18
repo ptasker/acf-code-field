@@ -41,6 +41,8 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 = 1.6 =
 * Improvement: Adding PHP language editor support
+* Improvement: Better default text highlighting
+* Bug fix: Hidden panels using the code field need to be clicked on to display contents
 
 = 1.5 =
 * Bug Fix: Adding support for flexible content fields

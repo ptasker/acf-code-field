@@ -21,6 +21,7 @@
 			extraKeys: { "Ctrl-Space": "autocomplete" },
 			matchBrackets: true,
 			styleSelectedText: true,
+			autoRefresh: true,
 			value: document.documentElement.innerHTML
 		} );
 
