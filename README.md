@@ -5,8 +5,8 @@
 **Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFP4RL9XM2ZWW  
 **Tags:** Advanced Custom Fields, ACF, Codemirror  
 **Requires at least:** 3.0.1  
-**Tested up to:** 4.6.1  
-**Stable tag:** 1.6  
+**Tested up to:** 4.7.2  
+**Stable tag:** 1.6.1
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -24,7 +24,6 @@ Plugin requires ACF free or pro to be installed to function.
 1. Upload the plugin files to the `/wp-content/plugins/acf-code-field` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. In the ACF custom fields manager, the option for the code field will be under the "Field Type" drop down under "Code Tools"
-
 
 
 ## Frequently Asked Questions 
@@ -48,6 +47,8 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 ## Changelog 
 
+### 1.6.1
+ * Bumping tested up to version
 
 ### 1.6 
 * Improvement: Adding PHP language editor support
