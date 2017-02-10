@@ -43,12 +43,8 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 ## Screenshots 
 
 ### 1. Settings page screenshot
-[missing image]
 
 ### 2. Editor screenshot with the Monokai theme enabled.
-[missing image]
-
-
 
 ## Changelog 
 
