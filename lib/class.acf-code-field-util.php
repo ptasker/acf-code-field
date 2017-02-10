@@ -3,7 +3,7 @@
 /**
  * Class ACF_Code_Field_Util
  *
- * Util class for helper methods 
+ * Util class for helper methods
  *
  */
 class ACF_Code_Field_Util {
@@ -20,8 +20,8 @@ class ACF_Code_Field_Util {
 		return $filenames;
 	}
 
-	public static function get_codemirror_themes() {
-		$files = self::get_files( ACFCF_PLUGIN_DIR . '/js/' . ACFCF_CODEMIRROR_VERSION . '/theme' );
+	public function get_codemirror_themes() {
+		$files = $this->get_files( ACFCF_PLUGIN_DIR . '/js/' . ACFCF_CODEMIRROR_VERSION . '/theme' );
 
 		if ( empty( $files ) ) {
 			return array();

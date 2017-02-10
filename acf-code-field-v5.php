@@ -106,19 +106,21 @@ class acf_code_field extends acf_field {
 			'name'         => 'mode',
 			'choices'      => array(
 				'htmlmixed'               => __( "HTML Mixed", 'acf' ),
-				'javascript'              => __( "javascript", 'acf' ),
-				'text/html'               => __( "html", 'acf' ),
-				'css'                     => __( "css", 'acf' ),
+				'javascript'              => __( "JavaScript", 'acf' ),
+				'text/html'               => __( "HTML", 'acf' ),
+				'css'                     => __( "CSS", 'acf' ),
 				'application/x-httpd-php' => __( "PHP", 'acf' ),
 			),
 		) );
+
+		$util = new ACF_Code_Field_Util();
 
 		acf_render_field_setting( $field, array(
 			'label'        => __( 'Editor theme', 'acf' ),
 			'instructions' => __( '', 'acf' ),
 			'type'         => 'select',
 			'name'         => 'theme',
-			'choices'      => ACF_Code_Field_Util::get_codemirror_themes(),
+			'choices'      => $util->get_codemirror_themes(),
 		) );
 
 	}
@@ -161,6 +163,7 @@ class acf_code_field extends acf_field {
 
 
 		echo $e;
+
 		wp_enqueue_style( "codemirror-curr-style-{$field['theme']}", "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/theme/{$field['theme']}.css" );
 
 	}
@@ -203,8 +206,8 @@ class acf_code_field extends acf_field {
 		wp_enqueue_script( 'acf-input-code-field-codemirror-xml', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/xml/xml.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-clike', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/clike/clike.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-php', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/php/php.js" );
-
 		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlmixed', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/htmlmixed/htmlmixed.js" );
+
 		wp_enqueue_script( 'acf-input-code-field-codemirror-showhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/show-hint.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-xmlhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/xml-hint.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/html-hint.js" );
