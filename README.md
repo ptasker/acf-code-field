@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: Advanced Custom Fields, ACF, Codemirror  
 Requires at least: 3.0.1  
 Tested up to: 4.7.2  
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -47,6 +47,11 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 ## Changelog 
 
+### 1.6.2
+ * Loading in all CodeMirror css themes as options for editor colors
+ * Adding PHP support to the v4 plugin
+ * Updating codemirror to version 5.23
+
 ### 1.6.1
  * Bumping tested up to version
 
@@ -67,6 +72,11 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 
 ## Upgrade Notice 
+
+### 1.6.2
+ * Loading in all CodeMirror css themes as options for editor colors
+ * Adding PHP support to the v4 plugin
+ * Updating codemirror to version 5.23
 
 ### 1.6.1
  * Bumping tested up to version
