@@ -208,6 +208,7 @@ class acf_code_field extends acf_field {
 		wp_enqueue_script( 'acf-input-code-field-codemirror-php', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/php/php.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlmixed', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/htmlmixed/htmlmixed.js" );
 
+
 		wp_enqueue_script( 'acf-input-code-field-codemirror-showhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/show-hint.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-xmlhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/xml-hint.js" );
 		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/html-hint.js" );
