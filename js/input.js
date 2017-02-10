@@ -9,9 +9,9 @@
 		var $textarea = $el.find( '.acf-input>textarea' );
 
 		//load needed CSS if doesn't already exist
-		if ( !$( "link[href='" + acf_code_field_obj.plugins_url + "/js/codemirror-5.13/theme/" + $textarea.attr( "theme" ) + ".css']" ).length ) {
-			$( '<link href="'+ acf_code_field_obj.plugins_url +'/js/codemirror-5.13/theme/' + $textarea.attr( "theme" ) + '.css" rel="stylesheet">' ).appendTo( "head" );
-		}
+		// if ( !$( "link[href='" + acf_code_field_obj.plugins_url + "/js/" + acf_code_field_obj.codemirror_version + "/theme/" + $textarea.attr( "theme" ) + ".css']" ).length ) {
+		// 	$( '<link href="' + acf_code_field_obj.plugins_url + '/js/' + acf_code_field_obj.codemirror_version + '/theme/' + $textarea.attr( "theme" ) + '.css" rel="stylesheet">' ).appendTo( "head" );
+		// }
 
 		var editor = CodeMirror.fromTextArea( $textarea[ 0 ], {
 			lineNumbers: true,

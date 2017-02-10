@@ -13,7 +13,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 // 1. set text domain
 // Reference: https://codex.wordpress.org/Function_Reference/load_plugin_textdomain
-load_plugin_textdomain( 'acf-code-field', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+load_plugin_textdomain( 'acf-code-field', false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+
+define( 'ACFCF_CODEMIRROR_VERSION', 'codemirror-5.23.0' );
+define( 'ACFCF_PLUGIN_DIR', dirname( __FILE__ ) );
+
+include_once( 'lib/class.acf-code-field-util.php' );
 
 // 2. Include field type for ACF5
 // $version = 5 and can be ignored until ACF6 exists

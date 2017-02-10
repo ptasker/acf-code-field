@@ -43,7 +43,7 @@ class acf_code_field extends acf_field {
 		*/
 
 		$this->defaults = array(
-			'mode' => 'htmlmixed',
+			'mode'  => 'htmlmixed',
 			'theme' => 'monokai',
 		);
 
@@ -84,20 +84,20 @@ class acf_code_field extends acf_field {
 
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
-			'instructions'	=> __('Appears when creating a new post','acf'),
-			'type'			=> 'textarea',
-			'name'			=> 'default_value',
-		));
+			'label'        => __( 'Default Value', 'acf' ),
+			'instructions' => __( 'Appears when creating a new post', 'acf' ),
+			'type'         => 'textarea',
+			'name'         => 'default_value',
+		) );
 
 
 		// placeholder
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Placeholder Text','acf'),
-			'instructions'	=> __('Appears within the input','acf'),
-			'type'			=> 'text',
-			'name'			=> 'placeholder',
-		));
+			'label'        => __( 'Placeholder Text', 'acf' ),
+			'instructions' => __( 'Appears within the input', 'acf' ),
+			'type'         => 'text',
+			'name'         => 'placeholder',
+		) );
 
 		acf_render_field_setting( $field, array(
 			'label'        => __( 'Editor mode', 'acf' ),
@@ -114,24 +114,12 @@ class acf_code_field extends acf_field {
 		) );
 
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Editor theme','acf'),
-			'instructions'	=> __('','acf'),
-			'type'			=> 'select',
-			'name'			=> 'theme',
-			'choices' => array(
-				'none'           => __( "None", 'acf' ),
-				'monokai'        => __( "monokai", 'acf' ),
-				'zenburn'        => __( "zenburn", 'acf' ),
-				'ambiance'       => __( "ambiance", 'acf' ),
-				'cobalt'         => __( "cobalt", 'acf' ),
-				'isotope'        => __( "isotope", 'acf' ),
-				'neo'            => __( "neo", 'acf' ),
-				'railscasts'     => __( "railscasts", 'acf' ),
-				'yeti'           => __( "yeti", 'acf' ),
-				'ttcn'           => __( "ttcn", 'acf' ),
-				'pastel-on-dark' => __( "pastel-on-dark", 'acf' ),
-			),
-		));
+			'label'        => __( 'Editor theme', 'acf' ),
+			'instructions' => __( '', 'acf' ),
+			'type'         => 'select',
+			'name'         => 'theme',
+			'choices'      => ACF_Code_Field_Util::get_codemirror_themes(),
+		) );
 
 	}
 
@@ -152,17 +140,16 @@ class acf_code_field extends acf_field {
 
 	function render_field( $field ) {
 
-		$dir = plugin_dir_url( __FILE__ );
-		$safe_slug = str_replace( "-", "_", $field[ 'id' ] );
+		$dir       = plugin_dir_url( __FILE__ );
+		$safe_slug = str_replace( "-", "_", $field['id'] );
 		// vars
 		$o = array( 'id', 'class', 'name', 'placeholder', 'mode', 'theme' );
 		$e = '';
 
 
-
 		// populate atts
 		$atts = array();
-		foreach( $o as $k ) {
+		foreach ( $o as $k ) {
 			$atts[ $k ] = $field[ $k ];
 		}
 
@@ -174,7 +161,7 @@ class acf_code_field extends acf_field {
 
 
 		echo $e;
-		wp_enqueue_style( "codemirror-curr-style-{$field['theme']}", "{$dir}js/codemirror-5.13/theme/{$field['theme']}.css" );
+		wp_enqueue_style( "codemirror-curr-style-{$field['theme']}", "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/theme/{$field['theme']}.css" );
 
 	}
 
@@ -202,30 +189,31 @@ class acf_code_field extends acf_field {
 
 		// Localize the script with new data
 		$localized_values = array(
-			'plugins_url' => plugins_url('acf-code-field'),
+			'plugins_url'        => plugins_url( 'acf-code-field' ),
+			'codemirror_version' => ACFCF_CODEMIRROR_VERSION,
 		);
 		wp_localize_script( 'acf-input-code-field-input', 'acf_code_field_obj', $localized_values );
 
 		// Enqueued script with localized data.
 		wp_enqueue_script( 'acf-input-code-field-input' );
 
-		wp_enqueue_script( 'acf-input-code-field-codemirror', "{$dir}js/codemirror-5.13/lib/codemirror.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-css', "{$dir}js/codemirror-5.13/mode/css/css.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-js', "{$dir}js/codemirror-5.13/mode/javascript/javascript.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-xml', "{$dir}js/codemirror-5.13/mode/xml/xml.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-clike', "{$dir}js/codemirror-5.13/mode/clike/clike.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-php', "{$dir}js/codemirror-5.13/mode/php/php.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/lib/codemirror.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-css', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/css/css.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-js', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/javascript/javascript.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-xml', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/xml/xml.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-clike', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/clike/clike.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-php', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/php/php.js" );
 
-		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlmixed', "{$dir}js/codemirror-5.13/mode/htmlmixed/htmlmixed.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-showhint', "{$dir}js/codemirror-5.13/addon/hint/show-hint.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-xmlhint', "{$dir}js/codemirror-5.13/addon/hint/xml-hint.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlhint', "{$dir}js/codemirror-5.13/addon/hint/html-hint.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-selection', "{$dir}js/codemirror-5.13/addon/selection/mark-selection.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-matchbrackets', "{$dir}js/codemirror-5.13/addon/edit/matchbrackets.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-autorefresh', "{$dir}js/codemirror-5.13/addon/display/autorefresh.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlmixed', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/htmlmixed/htmlmixed.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-showhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/show-hint.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-xmlhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/xml-hint.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/html-hint.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-selection', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/selection/mark-selection.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-matchbrackets', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/edit/matchbrackets.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-autorefresh', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/display/autorefresh.js" );
 
 		// register & include CSS
-		wp_enqueue_style( 'acf-input-code-field', "{$dir}js/codemirror-5.13/lib/codemirror.css" );
+		wp_enqueue_style( 'acf-input-code-field', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/lib/codemirror.css" );
 		wp_enqueue_style( 'acf-input-code-field-css', "{$dir}css/input.css" );
 		wp_enqueue_style( 'codemirror-monokai', "{$dir}css/theme/monokai.css" );
 	}

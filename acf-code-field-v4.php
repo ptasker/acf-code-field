@@ -204,8 +204,8 @@ class acf_code_field_v4 extends acf_field {
 
 
 		$dir = trailingslashit( plugin_dir_url( __FILE__ ) );
-		
-		wp_enqueue_style( 'codemirror-curr-style-'.$field['theme'], "{$dir}js/codemirror-5.13/theme/{$field['theme']}.css" );
+
+		wp_enqueue_style( 'codemirror-curr-style-' . $field['theme'], "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/theme/{$field['theme']}.css" );
 
 		?>
 
@@ -242,17 +242,17 @@ class acf_code_field_v4 extends acf_field {
 		$dir = trailingslashit( plugin_dir_url( __FILE__ ) );
 
 		// register & include JS
-		wp_enqueue_script( 'acf-input-code-field-codemirror', "{$dir}js/codemirror-5.13/lib/codemirror.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-css', "{$dir}js/codemirror-5.13/mode/css/css.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-js', "{$dir}js/codemirror-5.13/mode/javascript/javascript.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-xml', "{$dir}js/codemirror-5.13/mode/xml/xml.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlmixed', "{$dir}js/codemirror-5.13/mode/htmlmixed/htmlmixed.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-showhint', "{$dir}js/codemirror-5.13/addon/hint/show-hint.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-xmlhint', "{$dir}js/codemirror-5.13/addon/hint/xml-hint.js" );
-		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlhint', "{$dir}js/codemirror-5.13/addon/hint/html-hint.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/lib/codemirror.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-css', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/css/css.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-js', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/javascript/javascript.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-xml', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/xml/xml.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlmixed', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/mode/htmlmixed/htmlmixed.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-showhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/show-hint.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-xmlhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/xml-hint.js" );
+		wp_enqueue_script( 'acf-input-code-field-codemirror-htmlhint', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/addon/hint/html-hint.js" );
 
 		// register & include CSS
-		wp_enqueue_style( 'acf-input-code-field', "{$dir}js/codemirror-5.13/lib/codemirror.css" );
+		wp_enqueue_style( 'acf-input-code-field', "{$dir}js/" . ACFCF_CODEMIRROR_VERSION . "/lib/codemirror.css" );
 		wp_enqueue_style( 'codemirror-monokai', "{$dir}css/theme/monokai.css" );
 	}
 
