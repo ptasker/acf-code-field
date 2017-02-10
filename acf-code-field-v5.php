@@ -117,7 +117,7 @@ class acf_code_field extends acf_field {
 
 		acf_render_field_setting( $field, array(
 			'label'        => __( 'Editor theme', 'acf' ),
-			'instructions' => __( '', 'acf' ),
+			'instructions' => __( 'Themes can be previewed on the <a href="https://codemirror.net/demo/theme.html#default" target="_blank">codemirror website</a>', 'acf' ),
 			'type'         => 'select',
 			'name'         => 'theme',
 			'choices'      => $util->get_codemirror_themes(),
