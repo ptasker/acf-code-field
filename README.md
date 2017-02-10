@@ -68,6 +68,8 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 ## Upgrade Notice 
 
+### 1.6.1
+ * Bumping tested up to version
 
 ### 1.6 
 Adding PHP language editor support
