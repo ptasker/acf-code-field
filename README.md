@@ -1,6 +1,5 @@
 # ACF Code Field 
 
-# Plugin Name 
 Contributors: ptasker  
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFP4RL9XM2ZWW  
 Tags: Advanced Custom Fields, ACF, Codemirror  
