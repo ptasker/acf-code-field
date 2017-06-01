@@ -4,7 +4,7 @@ Contributors: ptasker
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFP4RL9XM2ZWW  
 Tags: Advanced Custom Fields, ACF, Codemirror  
 Requires at least: 3.0.1  
-Tested up to: 4.7.2  
+Tested up to: 4.8
 Stable tag: 1.6.3
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
