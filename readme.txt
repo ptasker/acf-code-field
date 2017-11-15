@@ -45,6 +45,9 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 
 == Changelog ==
 
+= 1.6.4 =
+ * Updating tested up to 4.9
+
 = 1.6.3 =
  * Readme.txt fix for new UI
  * CSS fix for flexible content areas
