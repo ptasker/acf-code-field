@@ -2,8 +2,8 @@
 
 Contributors: ptasker  
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZFP4RL9XM2ZWW  
-Tags: Advanced Custom Fields, ACF, Codemirror  
-Requires at least: 3.0.1  
+Tags: Advanced Custom Fields, ACF, Codemirror, code, code editor, code coloring, code highlighting, WordPress IDE, syntax highlighter
+Requires at least: 3.0.1
 Tested up to: 4.9
 Stable tag: 1.7
 License: GPLv2 or later  
