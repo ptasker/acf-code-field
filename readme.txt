@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: Advanced Custom Fields, ACF, Codemirror  
 Requires at least: 3.0.1  
 Tested up to: 4.9
-Stable tag: 1.6.4
+Stable tag: 1.7
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -44,6 +44,9 @@ It doesn't. Though Codemirror has several settings to escape data, the plugin do
 2. Editor screenshot with the Monokai theme enabled.
 
 == Changelog ==
+
+= 1.7 =
+ * Using WP Core's built-in CodeMirror JavaScript and CSS if > WP 4.9
 
 = 1.6.4 =
  * Updating tested up to 4.9

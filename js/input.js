@@ -8,7 +8,7 @@
 
 		var $textarea = $el.find( '.acf-input>textarea' );
 
-		var editor = CodeMirror.fromTextArea( $textarea[ 0 ], {
+		var editor = window.CodeMirror.fromTextArea( $textarea[ 0 ], {
 			lineNumbers: true,
 			fixedGutter: false,
 			mode: $textarea.attr( "mode" ),
