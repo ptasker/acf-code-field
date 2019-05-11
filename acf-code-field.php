@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: ACF Code Field
 Plugin URI: http://petetasker.com
 Description: ACF Code field using Codemirror
-Version: 1.7
+Version: 1.8
 Author: Peter Tasker
 Author URI: http://petetasker.com
 License: GPLv2 or later
